@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCs-type html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -83,7 +83,42 @@
       </div>
 
 
-      
+      <form id="order-form" action="/apply/" method="POST">
+        <div class="order-form__select--s-type">
+          <select name="s-type" id="s-type" onfocus='if(this.options.length > 8){ this.size = 8; }' onblur='this.size=1;' onchange='this.size=1; this.blur();' required>
+            <option value="" selected disabled>Выберите тип системы</option>
+            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+            <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+            <option value="Et harum quidem">Et harum quidem</option>
+            <option value="Temporibus autem">Temporibus autem</option>
+            <option value="Itaque earum rerum">Itaque earum rerum</option>
+            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+            <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+            <option value="Et harum quidem">Et harum quidem</option>
+            <option value="Temporibus autem">Temporibus autem</option>
+            <option value="Itaque earum rerum">Itaque earum rerum</option>
+          </select>
+          <label for="s-type">Выберите тип системы</label>
+        </div>
+        <div class="order-form__input--email">
+          <input type="email" name="email" id="email" required>
+          <label for="email">Ваш e-mail</label>
+        </div>
+        <div class="order-form__input--name">
+          <input type="text" name="name" id="name" required>
+          <label for="name">Ваше имя</label>
+        </div>
+    
+        <div class="order-form__input--file">
+          <input type="file" id="photo" accept=".gif, .jpg, .jpeg, .png" name="photo" required />
+          <label for="photo">&#65291;</label>
+          <span class="label-text">Прикрепить файл</span>
+        </div>
+        <!-- <div>
+          <input type="range" min="0" max="100" step="1" value="50"> 
+        </div> -->
+        <button type="submit">Отправить</button>
+      </form>
 
 
     </section>
@@ -112,11 +147,7 @@
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <!-- <script src="js/handleForm.js"></script> -->
-
-
-
-
+    <script src="js/handleForm.js"></script>
     <script>
       $(document).ready(function(){
         $(window).scroll(function(){
