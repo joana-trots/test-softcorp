@@ -8,6 +8,22 @@ form div {
   position: relative;
   width: calc((100% - 60px) / 3);
 }
+form div.order-form__input--range {
+  width: calc((100% - 30px) / 3 * 2);
+}
+form div.order-form__input--range div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+form div.order-form__input--range div span {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+form div.order-form__input--range div span#range-value {
+  font-weight: 600;
+}
 
 input,
 select {
@@ -37,6 +53,43 @@ select:valid ~ label:not([for=photo]) {
   font-size: 12px;
   left: 0;
   text-transform: uppercase;
+}
+input#range,
+select#range {
+  -webkit-appearance: none;
+  height: 6px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6980392157);
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  padding: 0;
+}
+input#range:hover,
+select#range:hover {
+  opacity: 1;
+}
+input#range::-webkit-slider-thumb,
+select#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 25px;
+  border: 0;
+  background: url("../images/icons/circle-icon.svg") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+input#range::-moz-range-thumb,
+select#range::-moz-range-thumb {
+  width: 24px;
+  height: 25px;
+  border: 0;
+  background: url("../images/icons/circle-icon.svg") no-repeat;
+  background-size: cover;
+  cursor: pointer;
 }
 input#photo,
 select#photo {
@@ -93,19 +146,36 @@ label[for=s-type] {
   opacity: 0;
 }
 label[for=photo] {
+  display: flex;
   position: relative;
+  height: 48px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid #3E9CDC;
+  border-radius: 3px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2A2B30;
+  text-transform: uppercase;
+}
+label[for=photo] span {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  border: 1px solid #3D4050;
-  padding: 0;
-  font-size: 12px;
-  color: #3D4050;
+}
+label[for=photo] span svg {
+  margin-right: 10px;
+  fill: inherit;
+  transition: 0.5s;
 }
 label[for=photo]:hover {
   color: #3E9CDC;
   border-color: #3E9CDC;
+}
+label[for=photo]:hover span svg {
+  fill: #3E9CDC;
 }
 label[for=photo].file-ok {
   position: relative;
@@ -113,29 +183,33 @@ label[for=photo].file-ok {
   background-position: center;
   width: 60px;
   height: 60px;
+  background-image: url("../images/icons/file-icon.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+label[for=photo].file-ok span {
+  display: none;
 }
 label[for=photo] + span.label-text {
   color: #3D4050;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 34px;
 }
 
 select {
   color: #3D4050;
   width: 100% !important;
 }
-select span {
-  height: 200px;
-}
 select:valid {
   color: #FFFFFF;
-  height: 48px;
 }
 select:valid ~ label {
   visibility: visible;
   opacity: 1;
+  padding-left: 0;
 }
 select:focus {
-  height: 120px;
+  height: 140px;
   background: #3D4050;
   position: absolute;
   z-index: 1;
@@ -144,10 +218,19 @@ select option {
   font-size: 18px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  height: 28px;
 }
 select option:hover {
   color: #3E9CDC;
   cursor: pointer;
+}
+select option:checked {
+  background: transparent;
+}
+select option::-webkit-scrollbar {
+  width: 1px;
+  height: 53px;
+  background-color: #3E9CDC;
 }
 
 button {

@@ -5,6 +5,22 @@ form{
     div{
         position: relative;
         width:calc( ( 100% - 60px ) / 3 );
+        &.order-form__input--range{
+            width:calc( (( 100% - 30px ) / 3) * 2 );
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                span{
+                    font-size: 18px;
+                    color: $white;
+                    margin-bottom: 6px;
+                    &#range-value{
+                        font-weight: 600;
+                    }
+                }
+            } 
+        }
     }
 }
     
@@ -34,7 +50,40 @@ select{
                 text-transform: uppercase;
             }
         }    
-    }    
+    } 
+    &#range{
+        -webkit-appearance: none;
+        height: 6px;
+        border: 1px solid $white;
+        border-radius: 5px;
+        background: #FFFFFFB2;
+        outline: none;
+        opacity: 0.9;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        padding: 0;
+        &:hover {
+            opacity: 1;
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 25px;
+            border: 0;
+            background: url('../images/icons/circle-icon.svg') no-repeat;
+            background-size: cover;
+            cursor: pointer;
+        }
+        &::-moz-range-thumb {
+            width: 24px;
+            height: 25px;
+            border: 0;
+            background: url('../images/icons/circle-icon.svg') no-repeat;
+            background-size: cover;
+            cursor: pointer;
+        }
+    }   
     &#photo{
         position: absolute;
         top: 0;
@@ -76,67 +125,76 @@ label{
     overflow: hidden;
     transition: 0.5s;
     color: #272733;
-    font-size: 18px;
-        
+    font-size: 18px;  
     &[for="s-type"]{
         visibility: hidden;
         opacity: 0;
     }
     &[for="photo"]{
-        position: relative;
-        // width: 40px;
-        // height: 40px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        height: 48px;
         cursor: pointer;
-        //background-color: $transparent;
-        
-        border: 1px solid $grey;
+        background-color: $white;
+        border: 1px solid $blue;
+        border-radius: 3px;
         padding: 0;
-        font-size: 12px;
-        color: $grey;
+        font-size: 15px;
+        font-weight: 600;
+        color: $black;
+        text-transform: uppercase;
+        span{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{
+                margin-right: 10px;
+                fill: inherit;
+                transition: 0.5s;
+            }
+        }
         &:hover{
             color: $blue;
-            border-color: $blue;
-            // width: 60px;
-            // height: 60px;
-            
+            border-color: $blue; 
+            span svg{
+                fill: $blue;
+            }       
         }
-            
         &.file-ok{
             position: relative;
             background-size: cover;
             background-position: center;
             width: 60px;
             height: 60px; 
-        }
-                    
+            background-image: url('../images/icons/file-icon.svg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            span{
+                display: none;
+            }
+        }      
         & + span.label-text{
             color: $grey;
-            font-size: 18px;
-        }
-            
-    }
-        
+            font-size: 15px;
+            line-height: 34px;
+        }    
+    }  
 }
                
 select{
     color: $grey;
     width: 100% !important;
-    span{
-        height: 200px;
-    }
     &:valid{
         color: $white;
-        height: 48px;
         & ~ label{
             visibility: visible;
             opacity: 1;
+            padding-left: 0;
         }
     }  
     &:focus{
-        height: 120px;
+        height: 140px;
         background: #3D4050;
         position: absolute;
         z-index: 1;
@@ -145,10 +203,19 @@ select{
         font-size: 18px;
         font-family: 'Lato', sans-serif;
         font-weight: 400;
+        height: 28px;
+        
         &:hover{
             color: $blue;
             cursor: pointer;
-
+        }
+        &:checked{
+            background: transparent;
+        }
+        &::-webkit-scrollbar {
+            width: 1px;
+            height: 53px;
+            background-color: $blue;
         }
     }
 }

@@ -12,7 +12,7 @@ function handleFormSubmit(event) {
   onSuccess(event.target)
 }
 function onSuccess(formNode) {
-  alert('Ваша заявка отправлена!')
+  alert('Ваша заявка отправлена!\nДанные выведены в консоль :)')
   formNode.classList.toggle('hidden')
 }
 
@@ -44,7 +44,6 @@ $('input[type="file"]').each(function(){
 		if(fileName) {
       $label
         .addClass('file-ok')
-        .css('background-image', 'url(' + tmppath + ')');
 			$labelText.text(fileName);
     } else {
       $label.removeClass('file-ok');
@@ -55,4 +54,11 @@ $('input[type="file"]').each(function(){
   });
   
 // End loop of file input elements  
+});
+
+
+// Range output
+$("#range-value").text($("#range").val());
+$("#range").on('input', function(){
+  $("#range-value").text($("#range").val())
 });
