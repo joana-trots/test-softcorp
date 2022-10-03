@@ -58,7 +58,9 @@ $('input[type="file"]').each(function(){
 
 
 // Range output
-$("#range-value").text($("#range").val());
+$("#range-value").text($("#range").val() + ' %');
 $("#range").on('input', function(){
-  $("#range-value").text($("#range").val())
+  $("#range-value").text($("#range").val() + ' %')
 });
+
+
