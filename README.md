@@ -1,7 +1,10 @@
 # Corporate Web Page
 
 This is a solution of a corporate web page with main screen and ordering form.
+
+
 ![Page Design](https://raw.githubusercontent.com/joana-trots/test-softcorp/master/page-design.png)
+
 
 ## Overview
 
