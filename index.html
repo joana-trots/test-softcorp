@@ -8,16 +8,21 @@
   </head>
   <body>
     <header>  
-        <a class="navigation__logo">
+        <a href="#" class="navigation__logo">
           <img src="images/logo.svg" alt="logo" />
         </a>
         <nav>
+          <a class="hamburger-wrapper">
+            <div class="hamburger-menu"></div>
+          </a>
+          <div class="mobile-menu-overlay">
           <ul>
             <li><a href="#business">Бизнес</a></li>
             <li><a href="#about">О нас</a></li>
             <li><a href="#prices">Цены</a></li>
             <li><a href="#order">Оформить заказ</a></li>
           </ul> 
+        </div>
         </nav>
     </header>
     <section class="main" id="business">
@@ -28,7 +33,7 @@
         <li>Sit voluptatem accusantium doloremque laudantium</li>
         <li>Sed ut perspiciatis, unde omnis iste natus error</li>
       </ul>
-      <div>
+      <div class="cta">
         <a href="#order" class="btn btn--blue">Заказать</a>
         <a href="#about" class="btn btn--white">Подробнее</a>
       </div>
@@ -42,8 +47,8 @@
           <img src="./images/icons/order-step-1.svg" alt="order step 1" />
           <figcaption>Lorem ipsum dolor sit amet</figcaption>
         </div>
-        <div class="order__steps--dot"></div>
-        <div class="order__steps--dot"></div>
+        <div class="order__steps--dot transp"></div>
+        <div class="order__steps--dot transp"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
@@ -51,8 +56,8 @@
           <img src="./images/icons/order-step-2.svg" alt="order step 2" />
           <figcaption>Сonsecteturadipiscing elit</figcaption>
         </div>
-        <div class="order__steps--dot"></div>
-        <div class="order__steps--dot"></div>
+        <div class="order__steps--dot transp"></div>
+        <div class="order__steps--dot transp"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
@@ -60,8 +65,8 @@
           <img src="./images/icons/order-step-3.svg" alt="order step 3" />
           <figcaption>Sed do eiusmod tempor</figcaption>
         </div>
-        <div class="order__steps--dot"></div>
-        <div class="order__steps--dot"></div>
+        <div class="order__steps--dot transp"></div>
+        <div class="order__steps--dot transp"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
@@ -69,8 +74,8 @@
           <img src="./images/icons/order-step-4.svg" alt="order step 4" />
           <figcaption>Esse cillum dolore eu fugiat</figcaption>
         </div>
-        <div class="order__steps--dot"></div>
-        <div class="order__steps--dot"></div>
+        <div class="order__steps--dot transp"></div>
+        <div class="order__steps--dot transp"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
         <div class="order__steps--dot"></div>
@@ -178,6 +183,19 @@
 
         })
     })
+    </script>
+    
+    <script>
+        (function () {
+	$('.hamburger-wrapper').on('click', function() {
+		$('.hamburger-menu').toggleClass('animate');
+		$('.mobile-menu-overlay').toggleClass('visible');
+	})
+	$('.mobile-menu-overlay > ul > li > a').on('click', function () {
+		$('.hamburger-menu').removeClass('animate');
+		$('.mobile-menu-overlay').removeClass('visible');
+	})
+})();
     </script>
   </body>
 </html>
