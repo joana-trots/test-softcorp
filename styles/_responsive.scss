@@ -38,24 +38,11 @@
     header{
         height: 80px;
     }
-    h1{
-        width: 80%;
-    }
-    footer{
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        padding: 30px;
-        .payments{
-            &::before,
-            &::after{
-                display: none;
-            } 
-        }
-    }
     section{
-        padding: 80px 10vw;
+        padding: 110px 10vw;
+        &.main{
+            padding-top:160px;
+        }
         &.order{
             .order__steps{
                 &--icon {
@@ -78,6 +65,19 @@
             }
         }
     }
+    footer{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px;
+        .payments{
+            &::before,
+            &::after{
+                display: none;
+            } 
+        }
+    }
 }
 @media screen and (max-width:900px){
     body{
@@ -90,23 +90,12 @@
         }
     }
     @import '_humburger.scss';
-}
-
-
-@media screen and (max-width:700px){
-    body{
-        font-size: 16px;
-        h1, h2{
-            font-size: 30px;
-            width: 100%;
-        }
-    }
     section{
-        padding: 70px 10vw;
         &.order{
             .order__steps{
                 flex-direction: column;
                 gap: 16px;
+                padding: 46px 50px 0;
                 &--icon {
                     width: 100px;
                     height: 100px;
@@ -130,6 +119,36 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width:700px){
+    body{
+        font-size: 16px;
+        h1{
+            margin-bottom: 20px;
+        }
+        h1, h2{
+            font-size: 30px;
+            width: 100%;
+        }
+        p{
+            margin: 20px 0 5px;
+            line-height: 20px;
+        }
+    }
+    section{
+        padding: 70px 10vw;
+        &.main{
+            padding-top: 120px;
+            ul{
+                margin: 10px 0 30px;
+                li{
+                    line-height: 20px;
+                }
+            }
+        }
+    }
     form{
         flex-direction: column;
         gap: 40px;
@@ -140,9 +159,6 @@
                 &__input--range{
                     width: 100%;
                     margin-bottom: 30px;
-                }
-                &__input--file{
-                    margin-left: -10px;
                 }
             }
         }
@@ -169,21 +185,8 @@
     section{
         padding: 50px 10vw;
         &.main{
-            ul{
-                margin: 40px 0;
-                line-height: 24px;
-                li{
-                    line-height: 24px;
-                }
-            }
-            .cta{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                .btn--blue{
-                    margin-right: 0;
-                }
-            }
+            max-height: 680px;
+            padding-top: 70px;
         }
     }
     input,
