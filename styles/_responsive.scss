@@ -79,6 +79,11 @@
         }
     }
 }
+@media screen and (max-width:958px){
+    form div.order-form__btn--submit {
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width:900px){
     body{
         font-size: 18px;

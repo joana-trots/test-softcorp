@@ -41,7 +41,7 @@ form{
                 }
             }
             &__btn--submit{
-                margin: 25px auto 0;
+                margin: 25px auto;
                 button{
                     width: 100%;
                     max-width: 100%;
@@ -253,7 +253,7 @@ select{
             padding-top: 10px;
         }
     }
-    &::-webkit-scrollbar {
+    &::-webkit-scrollba {
         width: 14px;
     }
     &::-webkit-scrollbar-thumb{
