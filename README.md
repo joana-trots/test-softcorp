@@ -1,7 +1,7 @@
 # Corporate Web Page
 
 This is a solution of a corporate web page with main screen and ordering form.
-
+!(https://raw.githubusercontent.com/joana-trots/test-softcorp/master/page-design.png)
 
 ## Overview
 
@@ -25,7 +25,7 @@ There are following form fields:
 
 **Otion Selection**
 
-I used intricate way (probably) to mach the design. 
+I used intricate way (probably) to mach the [design](https://raw.githubusercontent.com/joana-trots/test-softcorp/master/select-design.png). 
 It looks and works good in Chrome, and with small inperfections in Firefox and Safary.
 NOTE for the future: Try to use ``` <ul><li>1</li></ul>``` instead of ```<select><option>1</option></select>```.
 
