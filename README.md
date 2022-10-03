@@ -28,7 +28,7 @@ There are following form fields:
 
 
 **Option Selection**
-
+<br>
 I used intricate way (probably) to mach the [design](https://raw.githubusercontent.com/joana-trots/test-softcorp/master/select-design.png).
 <br>
 It looks and works good in Chrome, and with small inperfections in Firefox and Safary.
@@ -37,14 +37,14 @@ NOTE for the future: Try to use ``` <ul><li>1</li></ul>``` instead of ```<select
 
 
 **Range Input**
-
+<br>
 The range value is displayed next to it.
 <br>
 It's implemented in [handler](https://github.com/joana-trots/test-softcorp/blob/master/js/handleForm.js).
 
 
 **File input**
-
+<br>
 Any formats without restrictions.
 <br>
 Once the file is uploaded the input field changes its appearance and the file name displayed next to it.
