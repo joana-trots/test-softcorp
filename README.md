@@ -2,10 +2,9 @@
 
 This is a solution of a corporate web page with main screen and ordering form.
 
-##Links
+## Links
 
 Solution: https://github.com/joana-trots/test-softcorp
-
 Live Site: https://joana-trots.github.io/test-softcorp
 
 
