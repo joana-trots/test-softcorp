@@ -2,6 +2,12 @@
 
 This is a solution of a corporate web page with main screen and ordering form.
 
+## Links
+
+Solution: https://github.com/joana-trots/test-softcorp
+
+Live Site: https://joana-trots.github.io/test-softcorp
+
 
 ![Page Design](https://raw.githubusercontent.com/joana-trots/test-softcorp/master/page-design.png)
 
